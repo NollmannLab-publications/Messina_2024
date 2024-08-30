@@ -7,4 +7,4 @@ Code and data from Messina et al. 2024
 
 • Hi-M traces as well as matrices are accessible at OSF repository: https://osf.io/27dnx/?view_only=71678f1fcd924f7db81384f529c041b8. 
 
-• Script_figures contain all python script used to generate all figure pannels from Messina et al. 2024. Sources data used in the scripts are accessible at OSF repository: https://osf.io/27dnx/?view_only=71678f1fcd924f7db81384f529c041b8. 
+• Script_figures contain all python scripts used to generate all figure pannels from Messina et al. 2024. Sources data used in the scripts are accessible at OSF repository: https://osf.io/27dnx/?view_only=71678f1fcd924f7db81384f529c041b8. 
