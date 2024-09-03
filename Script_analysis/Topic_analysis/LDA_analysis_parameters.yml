@@ -1,0 +1,23 @@
+root_data_folder : ["/mnt/grey/DATA/users/JB/Topic_analysis/LDA_trainings/Olivier_training_2024/18_PDX1LR_30_CFMs_TSH100_Pancreas_ND_trained_batch"]
+ref_tissue : "Pancreas_ND_exocrine"
+min_topic_weight : 0.1
+load_previous_umap_analysis : True
+leiden_resolution : 0.3
+
+umap_dict:
+  metric: chebyshev
+  min_dist: 0.2
+  n_components: 2
+  n_neighbors: 50
+umap_seed: 0
+
+fontdic :
+  fontsize: 10
+  fontweight: 'normal'
+  verticalalignment: 'baseline'
+  horizontalalignment: 'center'
+
+## Indicate analyze_traces = True if you want to associate topics & raw single cell traces
+analyze_traces : False
+root_folder_raw_data : '/home/jb/Desktop/Test_traces/Decomposition/all_traces'
+min_topic_weight_for_trace : 0.5

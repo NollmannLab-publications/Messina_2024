@@ -1,0 +1,31 @@
+## Parameters for registration ##
+## =========================== ##
+## Indicate the parameters used for the registration as well as the reference and target DAPI images to use to optimize
+## the registration parameters.
+registration_parameters :
+  downsizing_power: 1
+  gaussian_filter_size: 10
+  angles_range: [-20, 20]
+  apply_zoom: True
+  zoom_range: [1, 1.1]
+  verbose: False
+
+reference_DAPI_folder : "/mnt/grey/DATA/rawData_2024/Experiment_4_Marion_RNA-FISH_DNA-FISH_rut/test_registration"
+template_reference_DAPI_file : "*_conf.tif"
+number_channel_reference_stack: 1
+reference_channel: 0
+
+target_DAPI_folder : "/mnt/grey/DATA/rawData_2024/Experiment_4_Marion_RNA-FISH_DNA-FISH_rut/test_registration"
+template_target_DAPI_file : "*_epi.tif"
+number_channel_target_stack: 1
+target_channel : 0
+
+
+
+## Indicate the folder where the analysis results will be saved
+## ------------------------------------------------------------
+dest_root_folder : "/mnt/grey/DATA/rawData_2024/Experiment_4_Marion_RNA-FISH_DNA-FISH_rut/test_registration"
+dest_analysis_folder : "test_05"
+overwrite_existing_file : True
+
+

@@ -1,0 +1,108 @@
+## Parameters for registration ##
+## =========================== ##
+## Indicate the parameters used for the registration as well as the reference and target DAPI images to use to optimize
+## the registration parameters.
+registration_parameters :
+  downsizing_power: 1
+  gaussian_filter_size: 10
+  angles_range: [-20, 20]
+  apply_zoom: True
+  zoom_range: [1, 1.1]
+  verbose: False
+
+reference_DAPI_folder : "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/HiM/DAPI_raw"
+template_reference_DAPI_file : "scan*.tif"
+number_channel_reference_stack: 2
+reference_channel: 0
+
+target_DAPI_folder : "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/seqRNA_FISH/DAPI_raw"
+template_target_DAPI_file : "scan*.tif"
+number_channel_target_stack: 1
+target_channel : 0
+
+## Parameters for mask calculation ##
+## =============================== ##
+## Indicate the pre-trained Ilastik projects as well as the labels associated to each project (note that Ilastik
+## labels are starting with a pixel value of 1 - by default a pixel value of 0 will always be associated to the "out"
+## class, defines after image registration and associated to the part of the mask where there is no data). A
+## rescaling factors list is also defined and used to speed up the segmentation.
+## 16/02/2023 : add possibility to load manually defined masks
+
+## Indicate the folder where the RNA FISH images are saved
+## -------------------------------------------------------
+rna_data_folder : "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/seqRNA_FISH/RT_raw"
+rna_ROI_folder_template : "ROI_*"
+rna_total_number_channels : 3
+
+## Indicate the folder where ilastik was installed
+## -----------------------------------------------
+Ilastik_folder : "/home/fiche/workspace/ilastik"  # to use when running on lopevi
+# Ilastik_folder : "/home/jb/Workspace/Ilastik"
+binning : True
+rescaling_Z : 2
+
+islet_segmentation_mode : "manual"
+islet_classification_model: "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/Masks_islet"
+islet_ROI_folder_template : "ROI_*"
+
+beta :
+  mode : "manual" # "ilastik"
+  ilastik_model : ""
+  ilastik_output_format : "" # "Simple Segmentation"
+  mask_path : "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/Ilastik/Beta_cell_manual_segmentation"
+  labels : ['out', 'beta', 'not_beta']
+  apply_MIP : True
+  rna_data_folder : "RT24"
+  rna_channel_to_keep : 0
+  h5_filename : "beta_stacks.h5"
+  h5_groupname : "beta_rna"
+  root_output_name : "beta"
+
+alpha :
+  mode : "ilastik"
+  ilastik_model : "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/Ilastik/Models/Segmentation_Alpha.ilp"
+  ilastik_output_format : "Probabilities" # "Simple Segmentation"
+  mask_path : ""
+  labels : ['out', 'alpha', 'not_alpha']
+  apply_MIP : False
+  rna_data_folder : "RT2"
+  rna_channel_to_keep : 2
+  h5_filename: "alpha_stacks.h5"
+  h5_groupname: "alpha_rna"
+  root_output_name : "alpha"
+
+gamma :
+  mode : "ilastik"
+  ilastik_model : "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/Ilastik/Models/Segmentation_Gamma.ilp"
+  ilastik_output_format : "Probabilities" # "Simple Segmentation"
+  mask_path : ""
+  labels : ['out', 'gamma', 'not_gamma']
+  apply_MIP : False
+  rna_data_folder : "RT8"
+  rna_channel_to_keep : 2
+  h5_filename: "gamma_stacks.h5"
+  h5_groupname: "gamma_rna"
+  root_output_name : "gamma"
+
+## Trace data & parameters ##
+## ======================= ##
+
+## Indicate the folder where the traces are saved
+## ----------------------------------------------
+him_traces_folder : "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/Analysis_180822_corrected"
+trace_ROI_pattern : '_ROI_Links'
+trace_file_pattern : 'Trace_3D_barcode_mask:mask0_ROI:'
+pyHiM_registration_ref_fiducial : "alignImages.json"
+trace_labels :
+  out : 0
+  exocrine : 1
+  beta : 2
+  alpha : 3
+  gamma : 4
+pixel_size : [0.1, 0.25]
+overlapping_threshold : 0.03  # in µm
+#minimum_efficiency : 0  # 0 = no constraint on the number of barcodes - 1 = all barcodes are required
+
+## Indicate the folder where the analysis results will be saved
+## ------------------------------------------------------------
+dest_folder : "/mnt/grey/DATA/rawData_2022/Experiment_6_Olivier_Marie_seqRNA_HiM_Pancreas/cell_sorting_analysis"
