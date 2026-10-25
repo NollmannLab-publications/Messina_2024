@@ -14,9 +14,10 @@ Hi-M traces as well as matrices are accessible at OSF repository: https://osf.io
 ## Scripts
 
 The `Script_figures` folder contains all python scripts used to generate all figure panels:
-	- `Normalization`: scripts used to normalize the PWD matrix from multiple experiments
-	- `DAPI_registration`: scripts used to register the DAPI images from DNA & RNA-FISH experiments
-	- `Cell-type_trace_selection`: scripts used to assign trace to specific cell types (exocrine, beta cells, etc.)
+
+- `Normalization`: scripts used to normalize the PWD matrix from multiple experiments
+- `DAPI_registration`: scripts used to register the DAPI images from DNA & RNA-FISH experiments
+- `Cell-type_trace_selection`: scripts used to assign trace to specific cell types (exocrine, beta cells, etc.)
 
 ## 3DTopic
 
