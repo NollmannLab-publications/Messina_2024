@@ -11,14 +11,14 @@ Hi-M data were analyzed using pyHiM release 0.7, available at https://github.com
 
 Hi-M traces as well as matrices are accessible at OSF repository: https://osf.io/27dnx/?view_only=71678f1fcd924f7db81384f529c041b8. 
 
-## Scripts
-
-The `Script_figures` folder contains all python scripts used to generate all figure panels:
+## Scripts for analysis
+The `Script_analysis` folder contains scripts used to perform LDA decomposition of HiM data, and to perform related data analysis, including:
 
 - `Normalization`: scripts used to normalize the PWD matrix from multiple experiments
 - `DAPI_registration`: scripts used to register the DAPI images from DNA & RNA-FISH experiments
 - `Cell-type_trace_selection`: scripts used to assign trace to specific cell types (exocrine, beta cells, etc.)
 
-## 3DTopic
 
-Scripts used to perform LDA decomposition of HiM data.
+## Scripts for plotting figures
+The `Script_figures` folder contains python scripts used to generate figure panels:
+
