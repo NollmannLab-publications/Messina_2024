@@ -1,0 +1,31 @@
+{
+    "data_path": "/mnt/grey/DATA/users/JB/Topic_analysis/2025_FOF_format",
+    "tag": "Bintu_HCT116_chr21_WT_40_83",
+    "file_to_process": [
+        "/mnt/grey/DATA/users/JB/Topic_analysis/2025_FOF_format/data/pwd/Bintu_HCT116_chr21_WT_40_83.npy"
+    ],
+    "efficiency_file_to_process": [
+        "/mnt/grey/DATA/users/JB/Topic_analysis/2025_FOF_format/data/barcode_efficiency/Bintu_HCT116_chr21_WT_40_83.npy"
+    ],
+    "contact_threshold": 150.0,
+    "num_components": 20,
+    "max_iterations": 4000,
+    "learning_method": "online",
+    "num_jobs": 1,
+    "train_data_proportion": 1.0,
+    "log_file": "/mnt/grey/DATA/users/JB/Topic_analysis/2025_FOF_format/training/Bintu_HCT116_chr21_WT_40_83/20-components_threshold=150.0_maxiters=4000_online_data_prop_1.0_batch_512_normalized_False_imputed_False_6ce144/decomposition_Bintu_HCT116_chr21_WT_40_83_6ce144.log",
+    "training_path": "/mnt/grey/DATA/users/JB/Topic_analysis/2025_FOF_format/training/Bintu_HCT116_chr21_WT_40_83/20-components_threshold=150.0_maxiters=4000_online_data_prop_1.0_batch_512_normalized_False_imputed_False_6ce144",
+    "min_barcode_efficiency": 0.65,
+    "batch_size": 512,
+    "normalized_data": false,
+    "imputed_data": false,
+    "sigmoid": false,
+    "n_barcodes": 44,
+    "n_data_train": 11547,
+    "n_data_test": 0,
+    "n_data_bfr_filtering": 11631,
+    "n_data_aft_filtering": 11547,
+    "model_num_iterations": 4000,
+    "model_score": -4325739.00584539,
+    "model_perplexity": 548.0100147617648
+}

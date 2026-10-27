@@ -1,0 +1,20 @@
+{
+    "root_dir": "/mnt/grey/DATA/users/gautham/Workspace/topics/",
+    "tag": "bintu2018Superresolution_Hs-HCT116-40-83_RAD21del",
+    "file_to_process": "/mnt/grey/DATA/users/gautham/Workspace/topics/data/processed/bintu2018Superresolution_Hs-HCT116-40-83_RAD21del.h5",
+    "contact_threshold": 150.0,
+    "softness": 0.0,
+    "num_components": 15,
+    "map_efficiency": 0.1,
+    "max_iterations": 4000,
+    "learning_method": "online",
+    "num_jobs": 1,
+    "train_data_proportion": 1,
+    "log_file": "/mnt/grey/DATA/users/gautham/Workspace/topics/training/bintu2018Superresolution_Hs-HCT116-40-83_RAD21del/15-components_threshold=150.0_softness=0.0_maxiters=4000_online_data_prop_1_batch_128_e1dfe0/decomposition_bintu2018Superresolution_Hs-HCT116-40-83_RAD21del_e1dfe0.log",
+    "num_barcodes": 44,
+    "num_data_train": 9526,
+    "num_data_test": 0,
+    "model_num_iterations": 4000,
+    "model_score": -2063968.3453940768,
+    "model_perplexity": 582.2115063534521
+}
